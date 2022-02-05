@@ -1,3 +1,4 @@
+from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
@@ -19,7 +20,7 @@ class User(AbstractUser):
     gender = models.IntegerField(choices=GENDER_VALID_CHOICES, default=1)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['username']
 
     class Meta:
         verbose_name = "user"
