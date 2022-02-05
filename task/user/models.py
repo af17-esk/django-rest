@@ -23,5 +23,21 @@ class User(AbstractUser):
     REQUIRED_FIELDS = ['username']
 
     class Meta:
-        verbose_name = "user"
-        verbose_name_plural = "users"
+        verbose_name = "User"
+        verbose_name_plural = "Users"
+
+    def __str__(self):
+        return self.email
+
+
+class UserProfile(models.Model):
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="profile")
+    designation = models.CharField(max_length=256, null=True, blank=True)
+
+    class Meta:
+        verbose_name = "User Profile"
+        verbose_name_plural = "User Profiles"
+
+    def __str__(self):
+        return self.user.email
