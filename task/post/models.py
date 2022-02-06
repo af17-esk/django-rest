@@ -12,7 +12,7 @@ class Post(models.Model):
 
     class Meta:
         verbose_name = "User Post"
-        verbose_name_plural = "User Post"
+        verbose_name_plural = "User Posts"
 
     def __str__(self):
         return self.title

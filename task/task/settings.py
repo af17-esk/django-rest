@@ -47,8 +47,6 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'user',
     'post',
-
-
 ]
 
 MIDDLEWARE = [
@@ -125,13 +123,10 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-        # 'rest_framework.authentication.SessionAuthentication',
-        # 'rest_framework.authentication.BasicAuthentication',
     ),
 }
 
 REST_USE_JWT = True
-
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_AUTHENTICATION_METHOD = 'email'

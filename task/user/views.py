@@ -42,9 +42,3 @@ class UserView(APIView):
 
         except Exception as e:
             raise ValidationError(e)
-
-
-
-
-
-

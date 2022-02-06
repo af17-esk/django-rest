@@ -21,6 +21,7 @@ class UserSerializer(serializers.ModelSerializer):
         profile = validated_data.pop("profile", None)
         user = super().update(instance, validated_data)
         if profile:
+            user.profile.all().delete()
             UserProfile.objects.bulk_create(
                 [
                     UserProfile(user=instance, **profile)
