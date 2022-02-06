@@ -1,0 +1,7 @@
+Django==3.2.12
+djangorestframework==3.13.1
+django-rest-auth
+djangorestframework-jwt
+django-cors-headers==3.7.0
+django-rest-swagger==2.2.0
+PyJWT==1.7.1
